@@ -1,4 +1,4 @@
-package com.patito.poo1pract.personajes;
+package edu.escuela.personajes;
 
 public class Personaje{
 	private String nombre;
