@@ -36,22 +36,5 @@ public class PruebaPersonaje{
 		System.out.println(per03.getDetalle());
 		System.out.println(per04.getDetalle());
 		System.out.println(per05.getDetalle());
-
-
-		/*Personaje alumno = new Personaje("Kal El", 0);
-		alumno.saludar();
-		System.out.println("Nombre: " + alumno.getNombre()+ " Edad: "+alumno.getEdad());
-		System.out.println("Modificando el nombre "+alumno.getNombre());
-		alumno.setNombre("Michael Jordan");
-		alumno.saludar();
-		if(!alumno.setEdad(30)){
-			System.out.println("Edad sin cambios");
-		}
-		System.out.println("Nombre: "+alumno.getNombre()+" Edad: "+alumno.getEdad());
-		System.out.println("Modificando edad en 130");
-		if(!alumno.setEdad(130)){
-			System.out.println("Edad sin cambio");
-		}
-		System.out.println("Nombre: "+alumno.getNombre()+ " Edad: "+alumno.getEdad());
-	}*/
+	}
 }
