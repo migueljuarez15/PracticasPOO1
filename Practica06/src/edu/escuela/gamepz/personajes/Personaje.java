@@ -1,4 +1,4 @@
-package edu.escuela.personajes;
+package edu.escuela.gamepz.personajes;
 
 public class Personaje{
 	private String nombre;
@@ -8,13 +8,11 @@ public class Personaje{
 		if (edad > 0 && edad < 120){
 			this.edad = edad;
 		}
-		edad = 0;
 	}
 	public void setNombre(String nombre){
 		if (nombre.length() > 5 && nombre.length() < 25){
 			this.nombre = nombre;
 		}
-		this.nombre = nombre;
 		this.edad = edad;
 	}
 	public String getNombre(){
