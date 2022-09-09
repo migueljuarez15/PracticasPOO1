@@ -5,11 +5,14 @@ public class Personaje{
 	private int edad;
 	public Personaje(String nombre, int edad){
 		this.nombre = nombre;
-		this.edad = edad;
+		if (edad > 0 && edad < 120){
+			this.edad = edad;
+		}
+		edad = 0;
 	}
 	public void setNombre(String nombre){
-		this.nombre= nombre;
-		this.edad = edad;
+		this.nombre = nombre;
+		String.length(nombre > 5 && nombre < 25)
 	}
 	public String getNombre(){
 		return nombre;
