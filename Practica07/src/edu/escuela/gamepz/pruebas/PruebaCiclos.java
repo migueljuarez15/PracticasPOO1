@@ -11,22 +11,31 @@ public class PruebaCiclos{
 			n = ((int)(Math.random()*100))
 			m = ((int)(Math.random()*100))
 		}
-		System.out.println(n);
-		System.out.println(m);
+		System.out.println("n = " + n);
+		System.out.println("m = " + m);
 
 		for (i = n; i < m; i++) {
 			int ed = ((int)(Math.random()*250))
 			per01.setEdad(ed);
-			System.out.println(per01.getDetalle() + "se modificó la edad");
-			System.out.println(per01.getDetalle() + "sin modificación en edad a " + ed);
+			if (true){
+				System.out.println(per01.getDetalle() + "se modificó la edad");
+			}else{
+				System.out.println(per01.getDetalle() + "sin modificación en edad a " + ed);
+			}
 			ed = ((int)(Math.random()*250))
 			per02.setEdad(ed);
-			System.out.println(per02.getDetalle() + "se modificó la edad");
-			System.out.println(per02.getDetalle() + "sin modificación en edad a " + ed);
+			if (true){
+				System.out.println(per02.getDetalle() + "se modificó la edad");
+			}else{
+				System.out.println(per02.getDetalle() + "sin modificación en edad a " + ed);
+			}
 			ed = ((int)(Math.random()*250))
 			per03.setEdad(ed);
-			System.out.println(per03.getDetalle() + "se modificó la edad");
-			System.out.println(per03.getDetalle() + "sin modificación en edad a " + ed);
+			if (true){
+				System.out.println(per03.getDetalle() + "se modificó la edad");
+			}else{
+				System.out.println(per03.getDetalle() + "sin modificación en edad a " + ed);
+			}
 		}
 	}
 }
