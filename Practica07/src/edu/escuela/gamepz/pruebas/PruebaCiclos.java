@@ -45,7 +45,7 @@ public class PruebaCiclos{
 					continue outfor;
 				} // CIERRE IF per04
 			}while (!per04.setEdad(ed));
-		} // CIERRE FOR
 		System.out.println(per04.getDetalle());
+		} // CIERRE FOR
 	} // CIERRE MAIN
 } // CIERRE CLASE
