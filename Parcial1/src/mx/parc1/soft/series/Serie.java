@@ -8,9 +8,9 @@ public class Serie{
 		this.x = x;
 	}
 	public int primoN(int n){
-		int m = ((int)(Math.random()*x*10))
+		
 	}
-	public int genNumero(int x){
-		return n;
+	public void genNumero(){
+		int num = ((int)(Math.random()*x*10));
 	}
 }// CIERRE CLASE.

@@ -1,5 +1,5 @@
-package mx.parc1.soft.pruebas;
-import mx.parc1.soft.series.Serie;
+package mx.parc1.soft.pruebas; // PAQUETE CORRESPONDIENTE.
+import mx.parc1.soft.series.Serie; //IMPORTACION.
 
 public class TestSeries{
 	public static void main(String[] args){
