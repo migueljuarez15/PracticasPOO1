@@ -7,14 +7,14 @@ public class Serie{
 		this.n = n;
 		this.x = x;
 	}
-	public int primoN(int n){
+	public void primoN(int n){
 		System.out.println("ola");
 	}
 	public int genNumero(int x){
 		int n = 0;
-		int x = 100;
 		while (n < x){
 			n = (int)(Math.random()*x*10);
 		}
+		return n;
 	}
 }// CIERRE CLASE.
