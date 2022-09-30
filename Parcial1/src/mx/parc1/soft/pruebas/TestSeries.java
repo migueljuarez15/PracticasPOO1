@@ -4,7 +4,7 @@ import mx.parc1.soft.series.Serie; //IMPORTACION.
 public class TestSeries{
 	public static void main(String[] args){
 		Serie s = new Serie(0, 0);
-		int n1 = s.genNumero(100);
+		int n1 = s.genNumero(20);
 		//s.primos(m);
 		int n2 = s.primoN(n1/10);
 		System.out.println(n2);
