@@ -3,7 +3,7 @@ import mx.parc1.soft.series.Serie; //IMPORTACION.
 
 public class TestSeries{
 	public static void main(String[] args){
-		Serie s = new Serie(0, 0);
+		Serie s = new Serie();
 		int n1 = s.genNumero(100);
 		//s.primos(m);
 		int n2 = s.primoN(n1/10);
