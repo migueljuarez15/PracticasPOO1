@@ -7,8 +7,11 @@ public class Serie{
 		this.n = n;
 		this.x = x;
 	}
-	public void primoN(int n){
-		System.out.println("ola");
+	public int primoN(int n){
+		for (int i = 2; i < n; i++) {
+			
+		}
+		return n % x == 0
 	}
 	public int genNumero(int x){
 		int n = 0;
