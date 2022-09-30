@@ -4,10 +4,10 @@ import mx.parc1.soft.series.Serie; //IMPORTACION.
 public class TestSeries{
 	public static void main(String[] args){
 		Serie s = new Serie(0, 0);
-		int m = s.genNumero(100);
+		int n1 = s.genNumero(100);
 		//s.primos(m);
-		int o = s.primoN(m/10);
-		System.out.println(o);
+		int n2 = s.primoN(n1/10);
+		System.out.println(n2);
 		//int n = s.genNumero(100);
 		//s.fibo(n);
 		//int p = s.fiboN(3, 11);

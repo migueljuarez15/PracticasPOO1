@@ -8,16 +8,17 @@ public class Serie{
 		this.x = x;
 	}
 	public int genNumero(int x){
-		int n = 0;
 		while (n < x){
-			n = (int)(Math.random()*x*10);
+			n = ((int)(Math.random()*x*10));
 		}
 		return x;
 	}
 	public int primoN(int n){
 		for (int i = 2; i < n; i++){
 			if (n % i == 0){
-				return n;
+				System.out.println(n + "Es primo");
+			}else{
+				System.out.println(n + "No es primo");
 			}
 		}
 		return n;
