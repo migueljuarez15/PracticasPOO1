@@ -8,16 +8,20 @@ public class Serie{
 		this.x = x;
 	}
 	public int genNumero(int x){
-		while (n < x){
-			n = ((int)(Math.random()*x*10));
-			for (int i = 2; i < n; i++){
-				if (n % i == 0){
-					System.out.println(n + " No es primo");
-				}else{
-					System.out.println(n + " Es primo");
-				}
+		int n = (int)(Math.random()*x*10);
+		outfor:
+		for (int i = 2; i < n; i++){
+			if (n % i == 0){
+				System.out.println(n + " No es primo");
+			}else{
+				System.out.println(n + " Es primo");
 			}
+			do{
+				n = ((int)(Math.random()*x*10));
+				continue outfor;
+			}while(n < x);
 		}
+
 		return x;
 	}
 	public int primoN(int n){
