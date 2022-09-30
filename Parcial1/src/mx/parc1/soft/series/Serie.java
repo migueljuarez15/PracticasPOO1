@@ -8,9 +8,13 @@ public class Serie{
 		this.x = x;
 	}
 	public int primoN(int n){
-		
+		System.out.println("ola");
 	}
-	public void genNumero(){
-		int num = ((int)(Math.random()*x*10));
+	public int genNumero(int x){
+		int n = 0;
+		int x = 100;
+		while (n < x){
+			n = (int)(Math.random()*x*10);
+		}
 	}
 }// CIERRE CLASE.
