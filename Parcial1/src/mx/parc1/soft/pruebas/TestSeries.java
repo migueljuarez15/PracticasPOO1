@@ -5,9 +5,10 @@ public class TestSeries{
 	public static void main(String[] args){
 		Serie s = new Serie();
 		int n1 = s.genNumero(100);
+		System.out.println(contador());
 		//s.primos(m);
-		int n2 = s.primoN(n1/10);
-		System.out.println(n2);
+		//int n2 = s.primoN(n1/10);
+		//System.out.println(n2);
 		//int n = s.genNumero(100);
 		//s.fibo(n);
 		//int p = s.fiboN(3, 11);
