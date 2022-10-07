@@ -16,15 +16,20 @@ public class PruebaHerencia{
 				new Zombie("Eduardo")};
 
 		for (Personaje tmp: pers) {
-			int numA = (int)(Math.random()*100);
 			System.out.println(tmp.getDetalle());
+			int numA = (int)(Math.random()*100);
 			if (tmp instanceof Planta){
-				System.out.println("Soy planta" + "\t" + escudo);
-				((Plantas)tmp).addVida(numA);
+				System.out.println("Soy planta" + "\t" + tmp.getDetalle());
+				tmp.addVida(numA);
 			}
 			if (tmp instanceof Zombie){
-				System.out.println("Soy zombie" + "\t" + ataque);
-				((Zombie)tmp).decVida(numA);
+				System.out.println("Soy zombie" + "\t" + tmp.getDetalle());
+				tmp.decVida(numA);
+			}
+			System.out.println(numA);
+			System.out.println(tmp.getDetalle());
+			for (int i = 0; i < pers; i++) {
+				System.out.println("*****Objeto " + i + "*****");
 			}
 		}
 	}
