@@ -28,7 +28,7 @@ public class PruebaHerencia{
 			}
 			System.out.println(numA);
 			System.out.println(tmp.getDetalle());
-			for (int i = 0; ; i++) {
+			for (int i = 1; i < 10; i++) {
 				System.out.println("*****Objeto " + i + "*****");
 			}
 		}
