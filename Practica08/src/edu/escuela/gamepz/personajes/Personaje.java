@@ -11,16 +11,28 @@ public class Personaje{
 		this(nombre, 3);
 	} //CIERRE Personaje2(String)
 	public void decVida(){
-		vida -= 1;
+		if (vida-1 > 0 && vida-1 < 99){
+			vida--;
+		}else{
+			vida = 3;
+		}
 	} //CIERRE decVida1()
 	public void decVida(int vida){
-		vida --;
+		if (vida-vida > 0 && vida-vida < 99){
+			vida--;
+		}else{
+			vida = 3;
+		}
 	} //CIERRE decVida2(int)
 	public void addVida(){
-		vida += 1;
+		if (vida > 0 && vida < 99){
+			vida++;
+		}
 	} //CIERRE addVida1()
 	public void addVida(int vida){
-		vida ++;
+		if (vida > 0 && vida < 99){
+			vida += vida;
+		}
 	} //CIERRE addVida2(int)
 	public void setNombre(String nombre){
 		if (nombre.length() > 5 && nombre.length() < 25){

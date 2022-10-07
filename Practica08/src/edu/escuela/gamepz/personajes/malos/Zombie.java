@@ -22,20 +22,18 @@ public class Zombie extends Personaje{
 		super.decVida();
 	} //CIERRE decVida()
 	public void decVida(int vida){
-		super.decVida(vida);
 		if (ataque){
-			vida *= 3;
+			super.decVida(vida * 3);
 		}else{
-			vida *= 2;
+			super.decVida(vida * 2);
 		}
 	} //CIERRE decVida(int)
 	public void addVida(){
 		super.addVida();
 	} //CIERRE addVida()
 	public void addVida(int vida){
-		super.addVida(vida);
 		if (ataque = true){
-			vida *= 3;
+			super.addVida(vida * 3);
 		}
 	} //CIERRE addVida(int)
 	public String getDetalle(){

@@ -27,8 +27,7 @@ public class Planta extends Personaje{
 	} //CIERRE decVida()
 	public void decVida(int vida){
 		if (escudo == 'A'){
-			super.decVida(vida);
-			vida *= 2;
+			super.decVida(vida * 2);
 		}
 	} //CIERRE decVida(int)
 	public void addVida(){
@@ -36,8 +35,7 @@ public class Planta extends Personaje{
 	} //CIERRE addVida()
 	public void addVida(int vida){
 		if (escudo == 'A'){
-			super.addVida(vida);
-			vida *= 2;
+			super.addVida(vida * 2);
 		}
 	} //CIERRE addVida(int)
 	public String getDetalle(){
