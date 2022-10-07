@@ -1,5 +1,5 @@
-package edu.escuela.gamepz.personajes.buenos;
-import edu.escuela.gamepz.personajes.Personaje;
+package edu.escuela.gamepz.personajes.buenos; //PAQUETE CORRESPONDIENTE
+import edu.escuela.gamepz.personajes.Personaje; //IMPORT CORRESPONDIENTE
 
 public class Planta extends Personaje{
 	private char escudo;
@@ -23,27 +23,27 @@ public class Planta extends Personaje{
 		return escudo;
 	} //CIERRE getEscudo
 	public void decVida(){
-		super.decVida()
-		if (escudo == 'A'){
+		super.decVida();
+		/*if (escudo == 'A'){
 			decVida(1);
-		}
+		}*/
 	} //CIERRE decVida()
 	public void decVida(int vida){
-		super.decVida(vida)
+		super.decVida(vida);
 		if (escudo == 'A'){
 			vida *= 2;
 		}
 	} //CIERRE decVida(int)
 	public void addVida(){
-		super.addVida()
-		if (escudo == 'A'){
+		super.addVida();
+		/*if (escudo == 'A'){
 			addVida(1);
-		}
+		}*/
 	} //CIERRE addVida()
 	public void addVida(int vida){
-		super.addVida()
+		super.addVida(vida);
 		if (escudo == 'A'){
-			addVida(1);
+			vida *= 2;
 		}
 	} //CIERRE addVida(int)
 	public String getDetalle(){
