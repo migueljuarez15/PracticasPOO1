@@ -1,4 +1,4 @@
-package edu.escuela.gamepz.personajes;
+package edu.escuela.gamepz.personajes; //PAQUETE CORRESPONDIENTE
 
 public class Personaje{
 	private String nombre;
