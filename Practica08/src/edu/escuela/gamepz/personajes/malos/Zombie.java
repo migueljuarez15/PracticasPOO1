@@ -23,7 +23,7 @@ public class Zombie extends Personaje{
 	} //CIERRE decVida()
 	public void decVida(int vida){
 		super.decVida(vida);
-		if (ataque = false){
+		if (ataque){
 			vida *= 3;
 		}else{
 			vida *= 2;
