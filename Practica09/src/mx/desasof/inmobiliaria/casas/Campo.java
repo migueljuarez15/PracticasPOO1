@@ -14,7 +14,7 @@ public class Campo extends Casa{
 		piscina[1] = largo;
 	}
 	public int hashCode(){
-		return super.hashCode() * ancho * largo / 5;
+		return super.hashCode() * (int)(piscina[0] * piscina[1]) / 5;
 	}
 	public boolean equals(Object objeto2){
 		if (super.equals(objeto2) && objeto2 instanceof Campo){
@@ -23,6 +23,6 @@ public class Campo extends Casa{
 		return false;
 	}
 	public String toString(){
-		return super.toString() + ancho + " " + largo + " ";
+		return super.toString() + piscina[0] + " " + piscina[1] + " ";
 	}
 }
