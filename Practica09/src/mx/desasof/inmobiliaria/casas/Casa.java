@@ -15,9 +15,9 @@ public class Casa{
 	public int hashCode(){
 		return tipo.hashCode() * hab * (int)(costo);
 	}
-	public boolean equals(Object objeto){
-		if (objeto != null && objeto instanceof Casa){
-			Casa c = ((Casa)objeto);
+	public boolean equals(Object objeto1){
+		if (objeto1 != null && objeto1 instanceof Casa){
+			Casa c = ((Casa)objeto1);
 			if ((tipo.equals(c.tipo)) && (costo == c.costo)){
 				return true;
 			}

@@ -10,4 +10,16 @@ public class Urbana extends Casa{
 		super(tipo, 2, 2000000f);
 		this.bannos = bannos;
 	}
+	public int hashCode(){
+		return super.hashCode() * bannos * 23;
+	}
+	public boolean equals(Object objeto3){
+		if (super.equals(objeto3) && objeto3 instanceof Urbana){
+			return true;
+		}
+		return false;
+	}
+	public String toString(){
+		return super.toString() + bannos;
+	}
 }
