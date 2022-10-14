@@ -1,7 +1,5 @@
 package mx.desasof.inmobiliaria.pruebas; //PAQUETE CORRESPONDIENTE
-import mx.desasof.inmobiliaria.casas.Casa; //IMPORT CORRESPONDIENTE DE Casa
-import mx.desasof.inmobiliaria.casas.Campo; //IMPORT CORRESPONDIENTE DE Campo
-import mx.desasof.inmobiliaria.casas.Urbana; //IMPORT CORRESPONDIENTE DE Urbana
+import mx.desasof.inmobiliaria.casas.*; //IMPORT CORRESPONDIENTE
 
 public class PruebaCasa{
 	//MAIN
@@ -25,7 +23,26 @@ public class PruebaCasa{
 		while (i < casas.length){
 			//CICLO FOREACH
 			for (Casa c: casas){
-				
+				//CICLO IF 1
+				if (c == casas[i]){
+					System.out.println(casas[i] + " Son el mismo objeto " + c);
+					System.out.println(" = = = = = ");
+					break;
+				} //CIERRE IF 1
+
+				//CICLO IF 2
+				if (c.equals(casas[i])){
+					System.out.println(casas[i] + " Son iguales " + c);
+					System.out.println(" e e e e e ");
+					break;
+				} //CIERRE IF 2
+
+				//CICLO IF 3
+				if (!c.equals(casas[i])){
+					System.out.println(casas[i] + " No son iguales " + c);
+					System.out.println(" ! ! ! ! ! ");
+					continue;
+				} //CIERRE IF 3
 			} //CIERRE FOREACH
 			i++;
 		} //CIERRE WHILE

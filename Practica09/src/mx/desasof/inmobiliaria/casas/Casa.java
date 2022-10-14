@@ -15,7 +15,7 @@ public class Casa{
 
 	//CONSTRUCTOR 2
 	public Casa(String tipo){
-		this(tipo, 2, 2000000f);
+		this(tipo, 2, 2000000);
 	} //CIERRE CONSTRUCTOR 2
 
 	//MÉTODO HASHCODE()

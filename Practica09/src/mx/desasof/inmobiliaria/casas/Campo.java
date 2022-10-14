@@ -13,7 +13,7 @@ public class Campo extends Casa{
 
 	//CONSTRUCTOR 2
 	public Campo(String tipo, float ancho, float largo){
-		super(tipo, 2, 2000000f);
+		super(tipo, 2, 2000000);
 		piscina[0] = ancho;
 		piscina[1] = largo;
 	} //CIERRE CONSTRUCTOR 2

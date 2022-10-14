@@ -12,7 +12,7 @@ public class Urbana extends Casa{
 
 	//CONSTRUCTOR 2
 	public Urbana(String tipo, int bannos){
-		super(tipo, 2, 2000000f);
+		super(tipo, 2, 2000000);
 		this.bannos = bannos;
 	} //CIERRE CONSTRUCTOR 2
 	
