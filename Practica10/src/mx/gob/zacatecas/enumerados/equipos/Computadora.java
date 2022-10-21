@@ -12,6 +12,12 @@ public class Computadora{
 	public String getMarca(){
 		return marca;
 	}
+	public Tipo getTipo(){
+		return tipo;
+	}
+	public Memoria getMemoria(){
+		return memoria;
+	}
 	public String toString(){
 		return marca + " " + memoria.getTipo() + " " + memoria.getVelocidad() + " " + memoria.getPines() + " " + tipo.getType();
 	}
