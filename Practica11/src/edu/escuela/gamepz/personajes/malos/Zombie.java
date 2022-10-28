@@ -21,7 +21,7 @@ public class Zombie extends Personaje implements Muerto{
 	} //CIERRE getAtaque
 	public void decVida(){
 		if (ataque == false) {
-            super.decVida(1 * 3);
+            (1 * 3);
         }else{
             super.decVida();
         }
