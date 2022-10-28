@@ -1,4 +1,5 @@
 package edu.escuela.gamepz.utils;
+
 public enum Escudo{
 	SUPER(0),
 	MEDIO(1),
