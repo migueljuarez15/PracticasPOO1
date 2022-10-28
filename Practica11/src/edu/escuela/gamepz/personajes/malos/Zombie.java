@@ -19,24 +19,30 @@ public class Zombie extends Personaje{
 		return ataque;
 	} //CIERRE getAtaque
 	public void decVida(){
-		super.decVida();
+		if (ataque == false) {
+            super.decVida(1 * 3);
+        }else{
+            super.decVida();
+        }
 	} //CIERRE decVida()
-	public void decVida(int vida){
-		if (ataque){
-			super.decVida(vida * 3);
-		}else{
-			super.decVida(vida * 2);
-		}
+	public void decVida(int vidaDZ){
+		if (ataque == false) {
+            super.decVida(vidaDZ * 3);
+        }else{
+            super.decVida(vidaDZ);
+        }
 	} //CIERRE decVida(int)
 	public void addVida(){
-		super.addVida();
+		if (ataque == true) {
+            super.addVida(1 * 3);
+        }
 	} //CIERRE addVida()
-	public void addVida(int vida){
-		if (ataque = true){
-			super.addVida(vida * 3);
-		}
+	public void addVida(int vidaAZ){
+		if (ataque == true) {
+            super.addVida(vidaAZ * 3);
+        }
 	} //CIERRE addVida(int)
-	public String getDetalle(){
-		return super.getDetalle() + "\t" + ataque;
+	public String toString(){
+		return super.toString() + "\t" + ataque;
 	} //CIERRE getDetalle
 } //CIERRE CLASE
