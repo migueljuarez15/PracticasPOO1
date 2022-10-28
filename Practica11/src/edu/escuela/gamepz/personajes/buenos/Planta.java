@@ -1,25 +1,26 @@
 package edu.escuela.gamepz.personajes.buenos; //PAQUETE CORRESPONDIENTE
 import edu.escuela.gamepz.personajes.Personaje; //IMPORT CORRESPONDIENTE
+import edu.escuela.gamepz.utils.Escudo; //IMPORT CORRESPONDIENTE
 
 public class Planta extends Personaje{
-	private char escudo;
-	public Planta(String nombre, int vida, char escudo){
+	private Escudo escudo;
+	public Planta(String nombre, int vida, Escudo escudo){
 		super(nombre, vida);
 		this.escudo = escudo;
-	} //CIERRE Planta1(String, int, char)
-	public Planta(String nombre, char escudo){
+	} //CIERRE Planta1(String, int, Escudo)
+	public Planta(String nombre, Escudo escudo){
 		super(nombre, 3);
 		this.escudo = escudo;
-	} //CIERRE Planta2(String, char)
+	} //CIERRE Planta2(String, Escudo)
 	public Planta(String nombre, int vida){
 		super(nombre, vida);
-		escudo = 'A';
+		escudo = Escudo.NULO;
 	} //CIERRE Planta3(String, int)
 	public Planta(String nombre){
 		super(nombre, 3);
-		escudo = 'A';
+		escudo = Escudo.NULO;
 	} //CIERRE Planta4(String)
-	public char getEscudo(){
+	public Escudo getEscudo(){
 		return escudo;
 	} //CIERRE getEscudo
 	public void decVida(){
@@ -51,6 +52,6 @@ public class Planta extends Personaje{
         }
 	} //CIERRE addVida(int)
 	public String toString(){
-		return super.toString() + "\t" + escudo;
+		return super.toString() + "\t" + escudo.getNivel();
 	} //CIERRE getDetalle
 } //CIERRE CLASE
