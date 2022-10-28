@@ -10,14 +10,14 @@ public abstract class Personaje{
 	public Personaje(String nombre){
 		this(nombre, 3);
 	} //CIERRE Personaje2(String)
-	public abstract void decVida(); //CIERRE decVida1()
+	public abstract void decVida(); //CIERRE ABSTRACT decVida1()
 
-	public abstract void decVida(int vidaD); //CIERRE decVida2(int)
+	public abstract void decVida(int vidaD); //CIERRE ABSTRACT decVida2(int)
 
-	public abstract void addVida(); //CIERRE addVida()
+	public abstract void addVida(); //CIERRE ABSTRACT addVida()
 
-	public abstract void addVida(int vidaA); //CIERRE addVida2(int)
-	
+	public abstract void addVida(int vidaA); //CIERRE ABSTRACT addVida2(int)
+
 	public void setNombre(String nombre){
 		if (nombre.length() > 5 && nombre.length() < 25){
 			this.nombre = nombre;

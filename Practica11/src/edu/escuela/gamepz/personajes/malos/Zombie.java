@@ -1,7 +1,8 @@
 package edu.escuela.gamepz.personajes.malos; //PAQUETE CORRESPONDIENTE
 import edu.escuela.gamepz.personajes.Personaje; //IMPORT CORRESPONDIENTE
+import edu.escuela.gamepz.utils.Muerto; //IMPORT CORRESPONDIENTE
 
-public class Zombie extends Personaje{
+public class Zombie extends Personaje implements Muerto{
 	private boolean ataque;
 	public Zombie(String nombre, int vida, boolean ataque){
 		super(nombre, vida);
@@ -25,11 +26,11 @@ public class Zombie extends Personaje{
             super.decVida();
         }
 	} //CIERRE decVida()
-	public void decVida(int vidaDZ){
+	public void decVida(int vidaD){
 		if (ataque == false) {
-            super.decVida(vidaDZ * 3);
+            super.decVida(vidaD * 3);
         }else{
-            super.decVida(vidaDZ);
+            super.decVida(vidaD);
         }
 	} //CIERRE decVida(int)
 	public void addVida(){
@@ -37,11 +38,14 @@ public class Zombie extends Personaje{
             super.addVida(1 * 3);
         }
 	} //CIERRE addVida()
-	public void addVida(int vidaAZ){
+	public void addVida(int vidaA){
 		if (ataque == true) {
-            super.addVida(vidaAZ * 3);
+            super.addVida(vidaA * 3);
         }
 	} //CIERRE addVida(int)
+	public void comer(){
+		System.out.println("Come cerebros");
+	} //CIERRE comer
 	public String toString(){
 		return super.toString() + "\t" + ataque;
 	} //CIERRE getDetalle
