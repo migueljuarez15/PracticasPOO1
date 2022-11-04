@@ -17,10 +17,10 @@ public class PruebaTablero{
 			new Zombie("Josseline", true), 
 			new Zombie("Eduardo")
 		}; //CIERRE ARREGLOS
-		for (Personaje tmpP: datos) {
+		for (Personaje p: datos) {
 			int poss = (int)(Math.random()*20-5);
 			try{
-				Tablero.insertar(tmpP, poss);
+				Tablero.insertar(p, poss);
 			}catch(PersException pe){
 				System.err.println(pe.getMessage() + " " + pe.getPoss());
 			}
