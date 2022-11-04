@@ -29,7 +29,8 @@ public class Tablero{
 			throw new PersException("Indice fuera de rango ", poss);
 		}
 		if(personajes[poss] == null){
-			throw new PersException("Si personaje para borrar ", poss)
+			throw new PersException("Si personaje para borrar ", poss);
 		}
+		personajes[poss] = null;
 	}
 }
