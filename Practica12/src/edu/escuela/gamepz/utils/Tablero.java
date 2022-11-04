@@ -13,16 +13,23 @@ public class Tablero{
 			if(tmp == null){
 				System.out.println(cont + " - - - ");
 			}else{
-				System.out.println(cont + personajes[]);
+				System.out.println(cont + " " + tmp);
 			}
 		}
 		System.out.println("\n Fin *** Contenido del arreglo en Tablero");
 	}
-	public void insertar(Personaje p, int poss) throws PersException{
-		if(poss < 0 | poss > MAX_SIZE){
-			throw new PersException("Indice fuera de rango ", poss)
-		}else{
-			p.getPoss();
+	public static void insertar(Personaje p, int poss) throws PersException{
+		if(poss < 0 || poss > MAX_SIZE){
+			throw new PersException("Indice fuera de rango ", poss);
+		}
+		personajes[poss] = p;
+	}
+	public static void borrar(int poss) throws PersException{
+		if(poss < 0 || poss > MAX_SIZE){
+			throw new PersException("Indice fuera de rango ", poss);
+		}
+		if(personajes[poss] == null){
+			throw new PersException("Si personaje para borrar ", poss)
 		}
 	}
 }
