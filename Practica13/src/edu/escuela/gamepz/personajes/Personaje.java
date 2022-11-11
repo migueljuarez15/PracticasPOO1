@@ -66,6 +66,6 @@ public abstract class Personaje implements Comparable <Personaje>{
 		return (p.size < this.size) ? -1 : 1;
 	} //CIERRE compareTo
 	public String toString(){
-		return nombre + "\t" + vida;
+		return nombre + "\t" + vida + "\t" + size;
 	} //CIERRE toString
 } //CIERRE CLASE

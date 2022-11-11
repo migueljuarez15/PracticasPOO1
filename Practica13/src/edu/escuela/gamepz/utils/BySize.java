@@ -4,7 +4,7 @@ import java.util.Comparator; //IMPORT CORRESPONDIENTE
 public class BySize implements Comparator <Personaje>{
 	public int compare(Personaje p1, Personaje p2){
 		if (p1.genSize() != p2.genSize()) {
-			return (p2.genSize() < p1.genSize()) ? -1 : 1;
+			return (p1.genSize() > p2.genSize()) ? -1 : 1;
 		}
 		if (p1.getNombre().compareTo(p2.getNombre()) != 0) {
 			return p1.getNombre().compareTo(p2.getNombre());

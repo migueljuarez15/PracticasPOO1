@@ -22,7 +22,7 @@ public class PruebaColeccion{
 			new Zombie("Armando", Tablero.genVida())
 		}; //CIERRE ARREGLOS
 
-		TreeSet<Personaje>arbol = new TreeSet<>();
+		TreeSet<Personaje> arbol = new TreeSet<>();
 		LinkedList<Personaje> lista = new LinkedList<>();
 
 		for (Personaje tmp: datos){

@@ -9,11 +9,11 @@ public class Zombie extends Personaje implements Muerto{
 		this.ataque = ataque;
 	} //CIERRE Zombie1(String, int, boolean)
 	public Zombie(String nombre, boolean ataque){
-		super(nombre, 3);
+		super(nombre, 3, 0.0f);
 		this.ataque = ataque;
 	} //CIERRE Zombie2(String, boolean)
 	public Zombie(String nombre){
-		super(nombre, 3);
+		super(nombre, 3, 0.0f);
 		ataque = false;
 	} //CIERRE Zombie3(String)
 	public Zombie(String nombre, float size){

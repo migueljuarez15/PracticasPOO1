@@ -9,15 +9,15 @@ public class Planta extends Personaje{
 		this.escudo = escudo;
 	} //CIERRE Planta1(String, int, Escudo)
 	public Planta(String nombre, Escudo escudo){
-		super(nombre, 3);
+		super(nombre, 3, 0.0f);
 		this.escudo = escudo;
 	} //CIERRE Planta2(String, Escudo)
 	public Planta(String nombre, int vida){
-		super(nombre, vida);
+		super(nombre, vida, 0.0f);
 		escudo = Escudo.NULO;
 	} //CIERRE Planta3(String, int)
 	public Planta(String nombre){
-		super(nombre, 3);
+		super(nombre, 3, 0.0f);
 		escudo = Escudo.NULO;
 	} //CIERRE Planta4(String)
 	public Escudo getEscudo(){
