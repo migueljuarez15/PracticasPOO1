@@ -1,14 +1,17 @@
 package edu.escuela.gamepz.utils;
+import edu.escuela.gamepz.personajes.Personaje;
 import java.util.Comparator;
 public class BySize implements Comparator <Personaje>{
-	public int compare(Caricatura c1, Caricatura c2){
-		if (c1.getSueldo()!=c2.getSueldo()) {
-			return (c2.getSueldo()<c1.getSueldo()) ? -1 : 1; //el ? es para regresar una cosa u otra y cortar codigo (else)
+	public int compare(Personaje p1, Personaje p2){
+		if (p1.genSize() != p2.genSize()) {
+			return (p2.genSize() < p1.genSize()) ? -1 : 1;
 		}
-		if (c1.getHora() !=c2.getHora()) {
-			return c2.getHora()-c1.getHora();
+		if (p1.getNombre().compareTo(p2.getNombre()) != 0) {
+			return p1.getNombre().compareTo(p2.getNombre());
 		}
-		return 1;
-
+		if (p1.getVida() != p2.getVida()) {
+			return (p2.getVida() < p1.getVida()) ? -1 : 1;
+		}
+		return 0;
 	}
 }
