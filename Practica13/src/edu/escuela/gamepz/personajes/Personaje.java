@@ -47,14 +47,26 @@ public abstract class Personaje implements Comparable <Personaje>{
 			return false;
 		}
 	} //CIERRE setVida
-	public String toString(){
-		return nombre + "\t" + vida;
-	} //CIERRE getDetalle
 	public float genSize(){
 		float size = (float)(Math.random()*10);
 		DecimalFormat df = new DecimalFormat("#.00");
 		size = Float.valueOf(df.format(size));
 		return size;
-	}
+	} //CIERRE genSize
+	public int compareTo(Personaje p){
+		if (this.nombre.compareTo(p.nombre) == 0) {
+			return this.nombre.compareTo(p.nombre);
+		}
+		if (this.vida >= p.vida) {
+			return this.vida - p.vida;
+		}
+		if (this.size == p.size) {
+			return 0;
+		}
+		return (p.size < this.size) ? -1 :1;
+	} //CIERRE compareTo
+	public String toString(){
+		return nombre + "\t" + vida;
+	} //CIERRE toString
 
 } //CIERRE CLASE
