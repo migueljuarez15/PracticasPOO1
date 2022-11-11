@@ -1,6 +1,6 @@
-package edu.escuela.gamepz.utils;
-import edu.escuela.gamepz.personajes.Personaje;
-import java.util.Comparator;
+package edu.escuela.gamepz.utils; //PAQUETE CORRESPONDIENTE
+import edu.escuela.gamepz.personajes.Personaje; //IMPORT CORRESPONDIENTE
+import java.util.Comparator; //IMPORT CORRESPONDIENTE
 public class ByVida implements Comparator <Personaje>{
 	public int compare(Personaje p1, Personaje p2){
 		if (p1.getVida() != p2.getVida()) {
@@ -13,5 +13,5 @@ public class ByVida implements Comparator <Personaje>{
 			return (p2.genSize() < p1.genSize()) ? -1 : 1;
 		}
 		return 0;
-	}
-}
+	} //CIERRE compare
+} //CIERRE CLASE

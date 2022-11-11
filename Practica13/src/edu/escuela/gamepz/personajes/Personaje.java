@@ -1,5 +1,5 @@
 package edu.escuela.gamepz.personajes; //PAQUETE CORRESPONDIENTE
-import java.text.DecimalFormat;
+import java.text.DecimalFormat; //IMPORT CORRESPONDIENTE
 
 public abstract class Personaje implements Comparable <Personaje>{
 	private String nombre;
@@ -68,5 +68,4 @@ public abstract class Personaje implements Comparable <Personaje>{
 	public String toString(){
 		return nombre + "\t" + vida;
 	} //CIERRE toString
-
 } //CIERRE CLASE
