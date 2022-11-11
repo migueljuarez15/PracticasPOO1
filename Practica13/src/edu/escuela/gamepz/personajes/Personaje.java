@@ -9,9 +9,9 @@ public abstract class Personaje implements Comparable <Personaje>{
 		this.nombre = nombre;
 		this.vida = vida;
 		if (size == 0.0f){
-		this.size = genSize();
+			this.size = genSize();
 		}else{
-		this.size = Math.round(size)/100;
+			this.size = Math.round(size)/100;
 		}
 	} //CIERRE Personaje1(String, int, float)
 	public Personaje(String nombre){
@@ -54,16 +54,16 @@ public abstract class Personaje implements Comparable <Personaje>{
 		return size;
 	} //CIERRE genSize
 	public int compareTo(Personaje p){
-		if (this.nombre.compareTo(p.nombre) == 0) {
+		if (this.nombre.compareTo(p.nombre) != 0) {
 			return this.nombre.compareTo(p.nombre);
 		}
-		if (this.vida >= p.vida) {
+		if (this.vida != p.vida) {
 			return this.vida - p.vida;
 		}
 		if (this.size == p.size) {
 			return 0;
 		}
-		return (p.size < this.size) ? -1 :1;
+		return (p.size < this.size) ? -1 : 1;
 	} //CIERRE compareTo
 	public String toString(){
 		return nombre + "\t" + vida;
