@@ -9,9 +9,6 @@ public class ByVida implements Comparator <Personaje>{
 		if (p1.getNombre().compareTo(p2.getNombre()) != 0) {
 			return p1.getNombre().compareTo(p2.getNombre());
 		}
-		if (p1.genSize() != p2.genSize()) {
-			return (p2.genSize() < p1.genSize()) ? -1 : 1;
-		}
-		return 0;
+		return (p2.getSize() < p1.getSize()) ? -1 : 1;
 	} //CIERRE compare
 } //CIERRE CLASE

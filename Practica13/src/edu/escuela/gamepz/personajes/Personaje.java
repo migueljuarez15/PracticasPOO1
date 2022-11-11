@@ -33,6 +33,9 @@ public abstract class Personaje implements Comparable <Personaje>{
 	public String getNombre(){
 		return nombre;
 	} //CIERRE getNombre
+	public float getSize(){
+		return size;
+	} //CIERRE getSize
 	public void saludar(){
 		System.out.println("Hola Alumno de POO " + nombre);
 	} //CIERRE saludar
@@ -60,10 +63,7 @@ public abstract class Personaje implements Comparable <Personaje>{
 		if (this.vida != p.vida) {
 			return this.vida - p.vida;
 		}
-		if (this.size == p.size) {
-			return 0;
-		}
-		return (p.size < this.size) ? -1 : 1;
+		return (this.size < p.size) ? -1 : 1;
 	} //CIERRE compareTo
 	public String toString(){
 		return nombre + "\t" + vida + "\t" + size;
