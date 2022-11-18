@@ -9,8 +9,11 @@ import java.util.TreeSet; //IMPORT CORRESPONDIENTE
 import java.util.ArrayList; //IMPORT CORRESPONDIENTE
 import java.util.Scanner; //IMPORT CORRESPONDIENTE
 import java.io.File; //IMPORT CORRESPONDIENTE
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.ObjectInputStream; //IMPORT CORRESPONDIENTE
+import java.io.ObjectOutputStream; //IMPORT CORRESPONDIENTE
+import java.io.FileInputStream; //IMPORT CORRESPONDIENTE
+import java.io.FileOutputStream; //IMPORT CORRESPONDIENTE
+import java.io.Serializable; //IMPORT CORRESPONDIENTE
 
 public class PruebaColeccion{
 	public static void main(String[] args) {
@@ -49,7 +52,7 @@ public class PruebaColeccion{
 			arbol.add(tmp);
 			lista.add(tmp);
 		}
-		//guardarObjetos(f, arbol);
+		guardarObjetos(arbol);
 
 		System.out.println(" - - - Orden Natural - - - ");
 		for (Personaje p: arbol){
@@ -73,10 +76,17 @@ public class PruebaColeccion{
 			System.out.println(fileTmp);
 		}
 	} //CIERRE METODO mostrarDirectorio
-	private static void guardarObjetos(File fMe, Treeset arbMe){
-		ObjectInputStream oIn = ObjectInputStream("datArbol.ser");
-		ObjectOutputStream oOu = ObjectOutputStream(fMe, arbMe);
-		oOu.writeObject(fMe, arbMe);
-		oOu.close();
-	} //CIERRE METODO guardarObjetos
+	/*private static void guardarObjetos(TreeSet arbMe){
+		SerializeFile(){
+
+			try {
+				FileOutputStream f = new FileOutputStream ("date.ser");
+				ObjectOutputStream s = new ObjectOutputStream (f);
+				s.writeObject (d);
+				s.close ();
+			}catch (IOException e){
+				e.printStackTrace ();
+			}
+		}
+	} //CIERRE METODO guardarObjetos*/
 } //CIERRE CLASE
