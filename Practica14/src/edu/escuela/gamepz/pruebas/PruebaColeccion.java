@@ -13,7 +13,9 @@ import java.io.ObjectInputStream; //IMPORT CORRESPONDIENTE
 import java.io.ObjectOutputStream; //IMPORT CORRESPONDIENTE
 import java.io.FileInputStream; //IMPORT CORRESPONDIENTE
 import java.io.FileOutputStream; //IMPORT CORRESPONDIENTE
+import java.io.OutputStream; //IMPORT CORRESPONDIENTE
 import java.io.Serializable; //IMPORT CORRESPONDIENTE
+import java.io.IOException; //IMPORT CORRESPONDIENTE
 
 public class PruebaColeccion{
 	public static void main(String[] args) {
@@ -32,7 +34,7 @@ public class PruebaColeccion{
 		String path = System.getProperty("user.home") + System.getProperty("file.separator");
 		Scanner s = new Scanner(System.in);
 
-		System.out.println("Escribe el nombre del archivo/directorio: ");
+		System.out.print("Escribe el nombre del archivo/directorio:   ");
 		String fname = s.nextLine();
 		path += fname;
 		File f = new File(path);
@@ -76,17 +78,16 @@ public class PruebaColeccion{
 			System.out.println(fileTmp);
 		}
 	} //CIERRE METODO mostrarDirectorio
-	/*private static void guardarObjetos(TreeSet arbMe){
-		SerializeFile(){
-
-			try {
-				FileOutputStream f = new FileOutputStream ("date.ser");
-				ObjectOutputStream s = new ObjectOutputStream (f);
-				s.writeObject (d);
-				s.close ();
-			}catch (IOException e){
-				e.printStackTrace ();
+	private static void guardarObjetos(TreeSet arbMe){
+		try{
+			FileOutputStream outS = new FileOutputStream("datArbol.ser");
+			ObjectOutputStream oIn = new ObjectOutputStream(outS);
+			for (Object o: arbMe) {
+				oIn.writeObject(o);
 			}
+			oIn.close();
+		}catch (IOException ioe){
+			ioe.printStackTrace();
 		}
-	} //CIERRE METODO guardarObjetos*/
+	} //CIERRE METODO guardarObjetos
 } //CIERRE CLASE
