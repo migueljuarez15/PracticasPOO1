@@ -82,7 +82,7 @@ public class PruebaColeccion{
 		try{
 			FileOutputStream outS = new FileOutputStream(fMe);
 			ObjectOutputStream oIn = new ObjectOutputStream(outS);
-			for (Object o: arbMe) {
+			for (Personaje o: arbMe) {
 				oIn.writeObject(o);
 			}
 			oIn.close();
