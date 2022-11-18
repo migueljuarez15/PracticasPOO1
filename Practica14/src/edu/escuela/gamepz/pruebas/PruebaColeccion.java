@@ -8,6 +8,7 @@ import java.util.LinkedList; //IMPORT CORRESPONDIENTE
 import java.util.TreeSet; //IMPORT CORRESPONDIENTE
 import java.util.ArrayList; //IMPORT CORRESPONDIENTE
 import java.util.Scanner; //IMPORT CORRESPONDIENTE
+import java.io.File; //IMPORT CORRESPONDIENTE
 
 public class PruebaColeccion{
 	public static void main(String[] args) {
@@ -26,8 +27,18 @@ public class PruebaColeccion{
 		String path = System.getProperty("user.home") + System.getProperty("file.separator");
 		Scanner s = new Scanner(System.in);
 
+		System.out.println("Escribe el nombre del archivo/directorio: ");
 		String fname = s.nextLine();
 		path += fname;
+		File f = new File(path);
+		if (f.exists()){
+			System.out.println("El archivo ya existe");
+			return;
+		}
+		if (!f.isFile()){
+			//mostrarDirectorio(f);
+			return;
+		}
 
 		TreeSet<Personaje> arbol = new TreeSet<>();
 		LinkedList<Personaje> lista = new LinkedList<>();
@@ -36,6 +47,8 @@ public class PruebaColeccion{
 			arbol.add(tmp);
 			lista.add(tmp);
 		}
+		guardarObjetos(f, arbol);
+		
 		System.out.println(" - - - Orden Natural - - - ");
 		for (Personaje p: arbol){
 			System.out.println(p);
