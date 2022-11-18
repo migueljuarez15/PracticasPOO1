@@ -54,7 +54,7 @@ public class PruebaColeccion{
 			arbol.add(tmp);
 			lista.add(tmp);
 		}
-		guardarObjetos(arbol);
+		guardarObjetos(f, arbol);
 
 		System.out.println(" - - - Orden Natural - - - ");
 		for (Personaje p: arbol){
@@ -78,9 +78,9 @@ public class PruebaColeccion{
 			System.out.println(fileTmp);
 		}
 	} //CIERRE METODO mostrarDirectorio
-	private static void guardarObjetos(TreeSet arbMe){
+	private static void guardarObjetos(File fMe, TreeSet<Personaje> arbMe){
 		try{
-			FileOutputStream outS = new FileOutputStream("datArbol.ser");
+			FileOutputStream outS = new FileOutputStream(fMe);
 			ObjectOutputStream oIn = new ObjectOutputStream(outS);
 			for (Object o: arbMe) {
 				oIn.writeObject(o);
