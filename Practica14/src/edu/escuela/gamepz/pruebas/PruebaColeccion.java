@@ -33,11 +33,11 @@ public class PruebaColeccion{
 		String fname = s.nextLine();
 		path += fname;
 		File f = new File(path);
-		if (f.exists()){
+		if (f.exists() && f.isFile()){
 			System.out.println("El archivo ya existe");
 			return;
 		}
-		if (!f.isFile()){
+		if (f.isDirectory()){
 			mostrarDirectorio(f);
 			return;
 		}
@@ -49,7 +49,7 @@ public class PruebaColeccion{
 			arbol.add(tmp);
 			lista.add(tmp);
 		}
-		guardarObjetos(f, arbol);
+		//guardarObjetos(f, arbol);
 
 		System.out.println(" - - - Orden Natural - - - ");
 		for (Personaje p: arbol){
@@ -69,12 +69,14 @@ public class PruebaColeccion{
 		}
 	} //CIERRE MAIN
 	private static void mostrarDirectorio(File fMe){
-		fMe.getAbsolutePath();
-	}
+		for (String fileTmp: fMe.list()) {
+			System.out.println(fileTmp);
+		}
+	} //CIERRE METODO mostrarDirectorio
 	private static void guardarObjetos(File fMe, Treeset arbMe){
 		ObjectInputStream oIn = ObjectInputStream("datArbol.ser");
 		ObjectOutputStream oOu = ObjectOutputStream(fMe, arbMe);
 		oOu.writeObject(fMe, arbMe);
 		oOu.close();
-	}
+	} //CIERRE METODO guardarObjetos
 } //CIERRE CLASE
