@@ -7,6 +7,7 @@ import java.util.Collections; //IMPORT CORRESPONDIENTE
 import java.util.LinkedList; //IMPORT CORRESPONDIENTE
 import java.util.TreeSet; //IMPORT CORRESPONDIENTE
 import java.util.ArrayList; //IMPORT CORRESPONDIENTE
+import java.util.Scanner; //IMPORT CORRESPONDIENTE
 
 public class PruebaColeccion{
 	public static void main(String[] args) {
@@ -21,6 +22,12 @@ public class PruebaColeccion{
 			new Zombie("Dayan", Tablero.genVida(), true),
 			new Zombie("Armando", Tablero.genVida())
 		}; //CIERRE ARREGLOS
+
+		String path = System.getProperty("user.home") + System.getProperty("file.separator");
+		Scanner s = new Scanner(System.in);
+
+		String fname = s.nextLine();
+		path += fname;
 
 		TreeSet<Personaje> arbol = new TreeSet<>();
 		LinkedList<Personaje> lista = new LinkedList<>();
