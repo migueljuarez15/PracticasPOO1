@@ -9,6 +9,8 @@ import java.util.TreeSet; //IMPORT CORRESPONDIENTE
 import java.util.ArrayList; //IMPORT CORRESPONDIENTE
 import java.util.Scanner; //IMPORT CORRESPONDIENTE
 import java.io.File; //IMPORT CORRESPONDIENTE
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 public class PruebaColeccion{
 	public static void main(String[] args) {
@@ -36,7 +38,7 @@ public class PruebaColeccion{
 			return;
 		}
 		if (!f.isFile()){
-			//mostrarDirectorio(f);
+			mostrarDirectorio(f);
 			return;
 		}
 
@@ -48,7 +50,7 @@ public class PruebaColeccion{
 			lista.add(tmp);
 		}
 		guardarObjetos(f, arbol);
-		
+
 		System.out.println(" - - - Orden Natural - - - ");
 		for (Personaje p: arbol){
 			System.out.println(p);
@@ -66,4 +68,13 @@ public class PruebaColeccion{
 			System.out.println(p);
 		}
 	} //CIERRE MAIN
+	private static void mostrarDirectorio(File fMe){
+		fMe.getAbsolutePath();
+	}
+	private static void guardarObjetos(File fMe, Treeset arbMe){
+		ObjectInputStream oIn = ObjectInputStream("datArbol.ser");
+		ObjectOutputStream oOu = ObjectOutputStream(fMe, arbMe);
+		oOu.writeObject(fMe, arbMe);
+		oOu.close();
+	}
 } //CIERRE CLASE
