@@ -1,5 +1,6 @@
 package mx.com.hilos.corredores.hilos;
 import javax.swing.JLabel;
+
 public class Letra implements Runnable{
 	private char letra;
 	public Letra(JLabel etq, char letra){
