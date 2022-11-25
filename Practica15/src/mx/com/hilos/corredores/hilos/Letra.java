@@ -16,6 +16,7 @@ public class Letra implements Runnable{
 			try{
 				Thread.sleep(rand);
 			}catch(InterruptedException ie){
+				//NO ES NECESARIO EL PRINTLN, SOLO ERA PARA PONER ALGO EN EL CATCH
 				System.out.println("EJECUCION INTERRUMPIDA");
 			}
 		}
