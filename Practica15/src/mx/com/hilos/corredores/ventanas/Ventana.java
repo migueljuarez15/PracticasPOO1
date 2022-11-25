@@ -29,9 +29,9 @@ public class Ventana extends JFrame{
 		txtElem2 = new JTextField(3);
 		btnStart = new JButton("Comenzar");
 		btnStart.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent click){
-				btnStart.setEnabled(true);
-				//RunHilos.iniciar();
+			public void actionPerformed(ActionEvent e){
+				btnStart.setEnabled(false);
+				RunHilos.iniciar(txtElem1, txtElem2, hElem1, hElem2);
 			}
 		});
 		hElem1 = new JLabel("* Aqui va el hilo 1 *");
